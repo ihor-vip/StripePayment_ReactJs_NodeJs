@@ -1,8 +1,15 @@
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {Home, Success, Cancel} from "./components";
+
 function App() {
     return (
-        <h1 className="text-3xl font-bold underline">
-            Hello world!
-        </h1>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/success' element={<Success />} />
+                <Route path='/cancel' element={<Cancel />} />
+            </Routes>
+        </BrowserRouter>
   )
 }
 
